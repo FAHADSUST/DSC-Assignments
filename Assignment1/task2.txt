@@ -1,0 +1,55 @@
+Data Streams and CEP - Assignment N°01
+
+Exercise 2: Query design.
+
+Query 1: Output a stream of readings for all books in the room number 036.
+
+SELECT bookID FROM (
+	SELECT * FROM books AS b, (
+		SELECT * FROM RFID_stream AS s, room_db AS r
+		WHERE s.reader_id = r.reader_id) AS d
+	WHERE b.tag_id = d.tag_id) AS c
+WHERE c.room_number = 36;
+
+Query 2: Get a stream of all books that left one room to another (taken by a person FROM one room to another) in the last 30 minutes.
+
+SELECT bookID FROM books as d, (
+	SELECT tag_id FROM (
+		SELECT a.reader_ID, a.tag_id, a.timestamp, b.reader_id, b.timestamp
+		FROM RFID_stream AS A [RANGE 30MIN], RFID_stream As B [RANGE 30MIN]
+		WHERE a.tag_id = b.tag_id)
+	WHERE a.reader_ID != b.reader_id AND a.timestamp != b.timestamp) as c
+WHERE c.tag_id = d.tag_id;
+
+
+Query 3: Get a stream of checked out books within the last 12 hours.
+
+SELECT bookID
+FROM books [RANGE 12HOURS]
+WHERE checked_out = true;
+
+Query 4: Return a result stream of books that were taken off shelve to a reading room and back within the last 12 hours.
+
+SELECT bookID FROM books AS e, (
+	SELECT tag_id FROM (
+		SELECT a.reader_id, a.timestamp, b.reader_id, b.tag_id, b.timestamp
+		FROM RFID_stream AS a [RANGE 12HOURS], (
+			SELECT c.reader_id, c.tag_id, c.timestamp
+			FROM RFID_stream AS c [RANGE 12HOURS],
+			RFID_stream AS d [RANGE 12HOURS]
+			WHERE c.tag_id = d.tag_id AND c.timestamp != d.timestamp AND c.reader_id = d.reader_id) AS b
+		WHERE a.tag_id = b.tag_id )
+	WHERE a.reader_id != b.reader_id AND a.timestamp < b.timestamp) AS f
+WHERE e.tag_id = f.tag_id;
+
+	
+
+Query 5: Return a result stream of books that were taken out of the library without being checked out.
+
+SELECT bookID FROM (
+	SELECT * FROM Room_DB AS r, (
+		SELECT * FROM RFID_stream AS s, books AS b
+		WHERE s.tag_ID = B.tag_ID)
+	AS d
+	WHERE r.reader_id = d.reader_id)
+WHERE Room_number = 4 AND checked_out = false;
