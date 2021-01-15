@@ -1,3 +1,5 @@
 1. SELECT pa.id, pa.name, pa.itemname, pa.description FROM (SELECT p.name, a.id, a.itemname, a.description FROM person AS p, auction [SIZE 600000 TIME] AS a WHERE p.id = a.seller) AS pa WHERE pa.name ='Luitpold Martucci';
 2. SELECT ac.itemname, ac.initialbid FROM auction [SIZE 60000 ADVANCE 10000 TIME] AS ac WHERE ac.initialbid >= 120;
 3. SELECT COUNT(bidder) AS numberOfBids, auction FROM bid [SIZE 60000 ADVANCE 10000 TIME] GROUP BY auction;
+4. SELECT * FROM (SELECT a.id AS auctionID, b.auction AS bidAuctionID, a.expires AS auctionExpiry , b.datetime AS bidTime FROM auction [UNBOUNDED] AS a, bid [UNBOUNDED] AS b WHERE a.id = b.auction) AS intermediate WHERE intermediate.auctionExpiry - intermediate.bidTime <= 120000;
+5. SELECT bi.auction, pe.state, COUNT(bi.bidder) FROM bid AS bi , person AS pe WHERE bi.bidder = pe.id GROUP BY bi.auction, pe.state ;
