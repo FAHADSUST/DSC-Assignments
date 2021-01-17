@@ -1,0 +1,55 @@
+Exercise 1: 
+
+1. What is the difference between DSMS and DBMS?
+
+DBMS:
+a) DBMS refers as Database management system.
+b) DBMS queries are one time queries.
+c) DBMS queries are transient and provide exact answer
+d) Random data access occurs in DBMS.
+e) It deals with persistent data
+f) Data update rates are relatively low in DBMS.
+g) DBMS doesn't gives any real time service.
+
+DSMS:
+a) DSMS refers as Data Stream Management system
+b) DSMS queries are continuous.
+c) DSMS query answer is outdated or approximate.
+d) Sequential data access occurs in DSMS
+e) It deals with volatile data streams.
+f) Data update rates are really high in DSMS.
+g) DSMS gives real time service
+
+2. What are the steps that a query goes through before its deployment?
+
+Choose a application.
+Create the queries through that application.
+Compile the query into a logical query plan.
+Trying to optimize the query for better possible outcomes.
+Converting the logical query into a physical query plan.
+Deploy and execute the physical query plan.
+
+3. How are queries processed in DSMS different to those in DBMS?
+
+a) DSMS handles continuous queries on the other hand DBMS handles one-time queries.
+b) Data stream sizes are unbounded and it behaves like an open-ended relation on the contrary database size limited to its tables.
+c) Maximum time data stream set up on temporal data and database is not based on temporal data
+d) Database queries always provide accurate and to the point data however data stream provides either exact or approximate data.
+e) A data stream system cannot re-read stream nevertheless database systems can access the same table as many times as application requires.
+
+4. Provide three use cases, where DSMS can be used; describe the data processed and the queries performed on them in each use case.
+
+
+1. Monitoring the number of speeders in a reduced speed area.
+a) Want to know how many cars went and whose speed was greater than certain speed limits.
+b) Want to retrieve an update every 10 seconds. 
+
+2. Weather monitoring System
+a) Get real-time storm detection and weather forecast through data streaming.
+b) In a heavy rainfall area, predict how much it may rain in that particular season.
+
+3. Online Game Streaming
+a) Monitor streaming data about player-game interactions then analyze the data in real time, in order to offer lucrative and dynamic experience.
+b) Monitoring which player  often spends how much time in a particular game and their decision making process.
+		
+
