@@ -1,0 +1,88 @@
+<!-- 
+  
+  Please fill in this form, so that it can be evaluated automatically later on.
+  
+ -->
+<review assignmentNumber="1" exercises="3">
+
+	<reviewers>
+		<reviewer email="md-fahad.hasan@stud.uni-bamberg.de" matrikelnummer="2043989"> </reviewer>
+		<reviewer email="stefan-wolfang.raab@stud.uni-bamberg..de" matrikelnummer="2033352"> </reviewer>
+		<reviewer email="abdullah-al.faiyaz@stud.uni-bamberg.de" matrikelnummer="2034094"> </reviewer>
+		<reviewer email="anne.schwarz@stud.uni-bamberg.de" matrikelnummer="1804723"> </reviewer>
+	</reviewers>
+
+	<GroupMembers>
+		<member email="mohammed-mostakim.ornob@stud.uni-bamberg.de" matrikelnummer=""> </member>
+		<member email="watina.malek@stud.uni-bamberg.de" matrikelnummer=""> </member>
+		<member email="reem-eslam-mohamed-mekky.khalil@stud.uni-bamberg.de" matrikelnummer=""> </member>
+		<member email="koshika.gaur@stud.uni-bamberg.de" matrikelnummer=""> </member>
+		<member email="christoph.wehner@stud.uni-bamberg.de" matrikelnummer=""> </member>
+	</GroupMembers>
+
+	<doneExercises>
+		<!-- 
+		== Please write the number of exercies done by the group 
+		-->
+
+		3
+	</doneExercises>
+
+	<reviewText>
+		<!-- 
+		== Please write the review for every exercise 
+		-->
+
+		Exercise 1:
+
+		Exercise 2:
+
+		General remark: For better readability, you could make sure that keywords (such as SELECT, WHERE, AS, ...) are written consistently. Either in capital letters or the first letter in capital letters, etc.
+
+			- Query 1: Output a stream of readings for all books in the room number 036.
+
+			Remark: We think that your solution should work.Alternatively you could again join on the books table to gather the books. It is not specified what a “stream of readings” is in the question.
+
+
+			- Query 2: Get a stream of all books that left one room to another (taken by a person FROM one room to another) in the last 30 minutes.
+
+			Remark: We only found some syntax issues
+
+			Select DISTINCT movedOptmized.bookID 
+			From( 
+				Select b.BookID As bookID, sdb.RoomNo As roomNO 
+				From RFID_Stream [SIZE 30 MINUTES TIME] AS rs, Books AS b, StaticDB AS sdb 
+				Where b.Tag_ID == rs.Tag_ID and sdb.ReaderID == rs.ReaderID 
+			) As movedNotOptmized, ( 
+				Select DISTINCT b.BookID As bookID, sdb.RoomNo As roomNO 
+				From RFID_Stream [SIZE 30 MINUTES TIME] AS rs, Books b, StaticDB AS sdb 
+				Where b.Tag_ID = rs.Tag_ID and sdb.ReaderID = rs.ReaderID 
+			) As movedOptmized
+			Where movedOptmized.bookID = movedNotOptmized.bookID and movedOptmized.roomNO != movedNotOptmized.roomNO;
+			
+
+			- Query 3: Get a stream of checked out books within the last 12 hours.
+
+			Remark: We have nothing to remark.
+
+
+			- Query 4: Return a result stream of books that were taken off shelve to a reading room and back within the last 12 hours.
+
+			Remark: As your comment makes clear, this solution only works for a specific room. You could change this by answering the question whether the books appear in different rooms based on their presence in more than one stream.
+
+			- Query 5: Return a result stream of books that were taken out of the library without being checked out.
+
+			Remark: Your solution is based on the assumption that a book provides an entry every minute. This should be noted. We do not have any other remarks further.
+
+		Exercise 3:
+	</reviewText>
+
+	<openQuestions>
+	a sample open question
+		<!-- 
+		== Please write your questions for topics that are still unclear for both the lecture
+		and the assignments
+		-->
+	</openQuestions>
+
+</review>
