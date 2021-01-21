@@ -1,8 +1,3 @@
-<!-- 
-  
-  Please fill in this form, so that it can be evaluated automatically later on.
-  
- -->
 <review assignmentNumber="1" exercises="3">
 
 	<reviewers>
@@ -13,26 +8,16 @@
 	</reviewers>
 
 	<GroupMembers>
-		<member email="mohammed-mostakim.ornob@stud.uni-bamberg.de" matrikelnummer=""> </member>
-		<member email="watina.malek@stud.uni-bamberg.de" matrikelnummer=""> </member>
-		<member email="reem-eslam-mohamed-mekky.khalil@stud.uni-bamberg.de" matrikelnummer=""> </member>
-		<member email="koshika.gaur@stud.uni-bamberg.de" matrikelnummer=""> </member>
-		<member email="christoph.wehner@stud.uni-bamberg.de" matrikelnummer=""> </member>
+		<member email ="mohammed-mostakim.ornob@stud.uni-bamberg.de" matrikelnummer="1985610"></member>
+		<member email ="watina.malek@stud.uni-bamberg.de" matrikelnummer="1985631"></member>
+		<member email ="reem-eslam-mohamed-mekky.khalil@stud.uni-bamberg.de" matrikelnummer="1978294"></member>
+		<member email ="koshika.gaur@stud.uni-bamberg.de" matrikelnummer="1985139"></member>
+		<member email ="christoph.wehner@stud.uni-bamberg.de" matrikelnummer="1983524"></member>
 	</GroupMembers>
 
-	<doneExercises>
-		<!-- 
-		== Please write the number of exercies done by the group 
-		-->
-
-		3
-	</doneExercises>
+	<doneExercises>3</doneExercises>
 
 	<reviewText>
-		<!-- 
-		== Please write the review for every exercise 
-		-->
-
 		Exercise 1: In our eyes, the solution fits as it is. We have nothing to remark.
 
 		Exercise 2:
@@ -77,11 +62,6 @@
 		Exercise 3: In our eyes, the solution fits as it is. We didn't find any bug or mistake in the queries and each runs perfectly in the system. We have nothing to remark.
 	</reviewText>
 
-	<openQuestions>
-		<!-- 
-		== Please write your questions for topics that are still unclear for both the lecture
-		and the assignments
-		-->
-	</openQuestions>
+	<openQuestions></openQuestions>
 
 </review>

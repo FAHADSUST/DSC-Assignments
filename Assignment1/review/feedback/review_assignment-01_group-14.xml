@@ -1,0 +1,39 @@
+<review assignmentNumber="1" exercises="3">
+	<reviewers>
+	  <reviewer email ="mohammed-mostakim.ornob@stud.uni-bamberg.de"          matrikelnummer="1985610"></reviewer>
+	  <reviewer email ="watina.malek@stud.uni-bamberg.de"                     matrikelnummer="1985631"></reviewer>
+	  <reviewer email ="reem-eslam-mohamed-mekky.khalil@stud.uni-bamberg.de"  matrikelnummer="1978294"></reviewer>
+	  <reviewer email ="koshika.gaur@stud.uni-bamberg.de"                     matrikelnummer="1985139"></reviewer>
+	  <reviewer email ="christoph.wehner@stud.uni-bamberg.de"                 matrikelnummer="1983524"></reviewer>
+	</reviewers>
+
+
+	<GroupMembers>
+		<member email ="md-fahad.hasan@stud.uni-bamberg.de"       matrikelnummer="2043989"></member>
+		<member email ="stefan-wolfang.raab@stud.uni-bamberg.de"  matrikelnummer="2033352"></member>
+		<member email ="abdullah-al.faiyaz@stud.uni-bamberg.de"   matrikelnummer="2034094"></member>
+		<member email ="anne.schwarz@stud.uni-bamberg.de"         matrikelnummer="1804723"></member>
+	</GroupMembers>
+ 
+
+	<doneExercises>3</doneExercises>
+
+	<reviewText>
+		Exercise 1 - All answers are correct. We have nothing to add. 
+		Exercise 2 - 
+			Query1 : right
+			Query2 : right
+			Query3 : Books is a database no datastream. Therefore, books need to be joined with the datastream RFID_streams. The time window needs to be applied to the RFID_stream.  
+			Query4 : Where do you check if it was taken back? Except that, it seems to be right. 
+			Query5 : Why room_number 4? Please make assumptions explicit. Is room number 4 the room where all books can be taken out of the library without being checked out? Datastreams need time windows.
+		Exercise 3 - The solutions are correct and produces the expected result set. The queries could have been written in more readable manner.
+	</reviewText>
+
+	<openQuestions>
+		none 
+	  <!--
+		== Please write your questions for topics that are still unclear for both the lecture
+		   and the assignments
+	   -->
+	</openQuestions>
+</review>
