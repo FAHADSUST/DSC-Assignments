@@ -1,0 +1,29 @@
+Exercise 3:
+------------------
+Answer the following questions:
+------------------
+1. Why do events require their occurrence time to be included? In which cases is it important?
+Provide an example.
+------------------
+Answer 1:    Occurence time of events are quite critical as these are required to analyze data and to come-up with meaning full analysis. Comparision of event's occurence time is an important factor as well.
+
+
+===========================================
+2. Why do some events require spatial properties? (When is that used, provide examples).
+------------------
+Answer 2:     Spatial properties are required to have geographical locations and/or spatial extents such as point coordinates, lines, or polygons which can be the critial information in some cases.
+GPS applications are quite good example of it as they send events containing information about location.
+
+
+===========================================
+3. A data stream can contain punctuations. Define what punctuations are, and give an example of how they can be used. 
+------------------
+Answer 3:     Punctuations are included in a data stream to convey knowledge about ends of data subsets. It informs a stream processor that no tuples exist after that punctuation that satisfy its predicate.
+
+If the bid structure is:
+< itemid, increase, buyerid >
+the punctuation < {1001, 2004} , * , * > describes all bids on
+items 1001 and 2004.
+
+
+===========================================

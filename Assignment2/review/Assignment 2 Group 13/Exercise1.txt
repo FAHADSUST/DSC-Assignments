@@ -1,0 +1,24 @@
+Query1:
+auction_person_join = join({predicate = 'auction.seller=person.id'}, auction, person)
+window = TIMEWINDOW({SIZE = [10, 'minutes'], auction_person_join)
+martucci = SELECT({PREDICATE = 'name== "luitpold Martucci"'}, window)
+project = PROJECT({attributes = ['id', 'name', 'itemname', 'description']}, martucci)
+
+Query2:
+select_bids = SELECT({PREDICATE = 'initialbid >= 120'}, auction)
+projection = PROJECT({attributes = ['itemname', 'initialbid']}, select_bids)
+
+Query3:
+window = TIMEWINDOW({SIZE=[2, 'minutes']}, bid)
+aggregate_auction = AGGREGATE({group_by=['auction'], AGGREGATIONS=[['COUNT', 'bidder', 'num_bids']]}, window)
+
+Query4:
+auctionmap = MAP({EXPRESSIONS=[['timestamp', 'TimestampAuction'], ['id', 'IDAuction'], ['expires', 'ExpiresAuction']]}, auction)
+mapstream = MAP({EXPRESSIONS=[['auction','bidAuctionID'], ['timestamp', 'TimestampBid'], ['datetime', 'DatetimeBid']]}, bid)
+bid_auction_join = JOIN({predicate='IDAuction=bidAuctionID'}, auctionmap, mapstream)
+filter_bids=SELECT({PREDICATE='ExpiresAuction-DatetimeBid<=120000'}, bid_auction_join)
+
+Query5:
+person_bid_join = join({predicate='id=bidder'}, bid, person)
+bid_window = TIMEWINDOW({SIZE = [2, 'minutes']}, person_bid_join)
+Aggregation = AGGREGATE({group_by=['auction', 'state'], AGGREGATIONS=[['COUNT', 'bidder', 'num_bids']]}, bid_window)
