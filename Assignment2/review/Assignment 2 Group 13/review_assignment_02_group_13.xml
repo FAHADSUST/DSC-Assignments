@@ -1,0 +1,32 @@
+<review assignmentNumber="1" exercises="3">
+
+	<reviewers>
+		<reviewer email="md-fahad.hasan@stud.uni-bamberg.de" matrikelnummer="2043989"> </reviewer>
+		<reviewer email="stefan-wolfang.raab@stud.uni-bamberg..de" matrikelnummer="2033352"> </reviewer>
+		<reviewer email="abdullah-al.faiyaz@stud.uni-bamberg.de" matrikelnummer="2034094"> </reviewer>
+		<reviewer email="anne.schwarz@stud.uni-bamberg.de" matrikelnummer="1804723"> </reviewer>
+	</reviewers>
+
+	<GroupMembers>
+		<member email ="md-anisul.haque@stud.uni-bamberg.de" matrikelnummer="2014099"></member>
+		<member email ="vincent-georg.lauber@stud.uni-bamberg.de" matrikelnummer="1834559"></member>
+		<member email ="Shivasharan.reddy@stud.uni-bamberg.de" matrikelnummer="2024814"></member>
+		<member email ="syed-taha-hassan-rizvi@stud.uni-bamberg.de" matrikelnummer="2050294"></member>
+	</GroupMembers>
+
+	<doneExercises>3</doneExercises>
+
+	<reviewText>
+		Exercise 1: In our eyes, the solution fits as it is.We didn't find any bug or mistake in the queries and each runs perfectly in the system. We have nothing to remark.
+
+		Exercise 2: In our eyes, the solution fits as it is. We have nothing to remark.
+
+		Exercise 3:
+            Question 1: Answer is correct but question also asked about examples which is missing in the answer.
+            Question 2: In our eyes, answer is correct with proper example.
+            Question 3: In our eyes, answer is correct  with proper example.
+	</reviewText>
+
+	<openQuestions></openQuestions>
+
+</review>
