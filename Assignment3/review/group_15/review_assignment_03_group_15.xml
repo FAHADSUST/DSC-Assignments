@@ -1,0 +1,47 @@
+<review assignmentNumber="1" exercises="3">
+
+	<reviewers>
+		<reviewer email="md-fahad.hasan@stud.uni-bamberg.de" matrikelnummer="2043989"> </reviewer>
+		<reviewer email="stefan-wolfang.raab@stud.uni-bamberg.de" matrikelnummer="2033352"> </reviewer>
+		<reviewer email="abdullah-al.faiyaz@stud.uni-bamberg.de" matrikelnummer="2034094"> </reviewer>
+		<reviewer email="anne.schwarz@stud.uni-bamberg.de" matrikelnummer="1804723"> </reviewer>
+	</reviewers>
+
+	<GroupMembers>
+		<member email ="ralf.lederer@stud.uni-bamberg.de" matrikelnummer="1814988"></member>
+		<member email ="syeda-farwa.zaidi@stud.uni-bamberg.de" matrikelnummer="2055491"></member>
+		<member email ="noman.azeem@stud.uni-bamberg.de" matrikelnummer="2055355"></member>
+		<member email ="muhammad-faisal-imran.khan@stud.uni-
+		bamberg.de" matrikelnummer="ba062398"></member>
+	</GroupMembers>
+
+	<doneExercises>3</doneExercises>
+
+	<reviewText>
+		Exercise 1
+		
+		Task 1 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 2 - In our eyes, the solution fits as it is. We have nothing to remark. 
+		
+		Task 3 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 4 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 5 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 6 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 7 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 8 - In our eyes, the solution fits as it is. Our suggestion for improvement is:
+		the weather feed could also feed the "Students App" with information.
+		
+		Task 9 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 10 - In our eyes, the solution fits as it is. We have nothing to remark.
+	</reviewText>
+
+	<openQuestions></openQuestions>
+
+</review>
