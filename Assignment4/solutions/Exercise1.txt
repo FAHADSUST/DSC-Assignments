@@ -1,0 +1,58 @@
+Exercise 1 : 
+match= SASE({schema=[['auction1','Integer'],['tmpstamp1','STARTTIMESTAMP'], auction2','Integer'],['tmpstamp2','STARTTIMESTAMP']],
+type='Result',
+query='PATTERN SEQ(bid auc1, bid auc2)
+WHERE skip_till_next_match(auc1,auc2)
+{auc1.auction = 0 and auc2.auction = 1}
+WITHIN 10 seconds
+RETURN auc1.auction, auc1.timestamp, auc2.auction, auc2.timestamp'}, bid)
+
+Exercise 2:
+match= SASE({schema=[['auction1','Integer'],['tmpstamp1','STARTTIMESTAMP'], ['price1','Double'],['auction2','Integer'], ['tmpstamp2','STARTTIMESTAMP'],['price2','Double']],
+type='Result',
+query='PATTERN SEQ(bid auc1, bid auc2)
+WHERE skip_till_next_match(auc1,auc2)
+{[auction] and auc2.price > auc1.price} WITHIN 10 seconds
+RETURN auc1.auction, auc1.timestamp, auc1.price, auc2.auction, auc2.timestamp, auc2.price'}, bid)
+
+Exercise 3:
+match= SASE({schema=[['auction','Integer'],['tmpstamp','STARTTIMESTAMP'], ['price','Double'],['auction1','Integer'], ['tmpstamp1','STARTTIMESTAMP'] ,['price1','Double']],
+type='Result',
+query='PATTERN SEQ(bid auc,bid+ a[]) WHERE skip_till_next_match (auc,a[])
+{[auction] and auc.price = 0.5 * a[a.LEN].price}
+WITHIN 60 seconds RETURN auc.auction, auc.timestamp, auc.price, a[a.LEN].auction, a[a.LEN].timestamp, a[a.LEN].price'}, bid)
+
+Exercise 4:
+match= SASE({schema=[['auction','Integer'],['tmpstamp','STARTTIMESTAMP'], ['price','Double'],['auction1','Integer'], ['tmpstamp1','STARTTIMESTAMP'] ,['price1','Double']],
+type='Result',
+query='PATTERN SEQ(bid auc,bid+ a[]) WHERE skip_till_next_match (auc,a[])
+{[auction] and auc.price + (auc.price * 0.8)<a[a.LEN].price}
+WITHIN 10 seconds RETURN auc.auction, auc.timestamp, auc.price, a[a.LEN].auction, a[a.LEN].timestamp, a[a.LEN].price'}, bid)
+
+Exercise 5:
+match3 = SASE({SCHEMA = [['person1', 'integer'],['person2', 'integer'],['person3', 'integer']],
+QUERY = 'PATTERN SEQ(person person1,person person2,person person3) 
+WITHIN 30 seconds 
+RETURN person1.id, person2.id, person3.id', TYPE = 'result'}, person)
+
+Exercise 6:
+match4 = SASE({SCHEMA = [['person_id_1', 'integer'],['auction_id_1', 'integer'],['person_id_2', 'integer'],['auction_id_2', 'integer'],['person_id_3', 'integer'],['auction_id_3', 'integer']], 
+QUERY = 'PATTERN SEQ(person person1, auction auction1,person person2, auction auction2, person person3, auction auction3) 
+where skip_till_any_match(person1,auction1,person2,auction2,person3,auction3)
+{person1.id = auction1.seller and person2.id = auction2.seller and person3.id = auction3.seller} 
+within 120 seconds 
+return person1.id, auction1.id, person2.id, auction2.id, person3.id, auction3.id', TYPE = 'result'}, person,auction)
+
+Exercise 7:
+PATTERN SEQ(nexmark:person2 person, nexmark:auction2 auction, nexmark:bid2+ bid[]) 
+where skip_till_any_match(person, auction, bid[])
+{person.id = auction.seller and auction.id = bid[1].auction and bid[1].auction = bid[i].auction and count(bid[..i-1].auction)=5 within 10 minutes 
+return person.name, auction.id, count(bid[..i-1].auction)
+
+Exercise 8:
+PATTERN SEQ(nexmark:person2 person, nexmark:auction2 auction, nexmark:bid2 bid) 
+where skip_till_next_match(person, auction, bid)
+{person.id = auction.seller and bid.bidder = person.id 
+return person.name, auction.id)
+
+
