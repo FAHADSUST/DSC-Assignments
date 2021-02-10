@@ -1,0 +1,59 @@
+<review assignmentNumber="1" exercises="3">
+
+	<reviewers>
+		<reviewer email="md-fahad.hasan@stud.uni-bamberg.de" matrikelnummer="2043989"> </reviewer>
+		<reviewer email="stefan-wolfang.raab@stud.uni-bamberg.de" matrikelnummer="2033352"> </reviewer>
+		<reviewer email="abdullah-al.faiyaz@stud.uni-bamberg.de" matrikelnummer="2034094"> </reviewer>
+		<reviewer email="anne.schwarz@stud.uni-bamberg.de" matrikelnummer="1804723"> </reviewer>
+	</reviewers>
+
+	<GroupMembers>
+		<member email ="maryam.kermani@stud.uni-bamberg.de" matrikelnummer="1935863"></member>
+		<member email ="maha.saleem@stud.uni-bamberg.de" matrikelnummer="2026350"></member>
+		<member email ="ammar.irshad@stud.uni-bamberg.de" matrikelnummer="1987047"></member>
+	</GroupMembers>
+
+	<doneExercises>3</doneExercises>
+
+	<reviewText>
+		Exercise 1
+		
+		Task 1 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 2 - In our eyes, the solution fits as it is. We have nothing to remark. 
+		
+		Task 3 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 4 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 5 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 6 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 7 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 8 - In our eyes, the solution fits as it is. 
+		
+		Task 9 - In our eyes, the solution fits as it is. We have nothing to remark.
+			Automat for Query 2: We have nothing to remark.
+			Automat for Query 3:
+				Our suggestion for improvement is: auc1.auction = auc.auction AND auc.price = 0.5 * a[a.LEN].price (on right arrow)
+			Automat for Query 4: 
+				Our suggestion for improvement is: auc1.auction = auc1.auction = auc.auction AND auc.price + (auc.price * 0.8) < a[a.LEN].price (on right arrow)
+
+		Exercise 2
+		
+		Task 1 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 2 - In our eyes, the solution fits as it is. We have nothing to remark. 
+		
+		Task 3 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 4 - In our eyes, the solution fits as it is. We have nothing to remark.
+		
+		Task 5 - In our eyes, the solution fits as it is. We have nothing to remark.
+	</reviewText>
+
+	<openQuestions></openQuestions>
+
+</review>
