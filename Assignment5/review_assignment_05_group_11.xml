@@ -1,0 +1,56 @@
+<!-- 
+  
+  Please fill in this form, so that it can be evaluated automatically later on.
+  
+ -->
+<review assignmentNumber="5" exercises="1">
+<!-- 
+    == Please specify the reviewers by using the <reviewer> tag for every reviewer.
+    == add or remove the <reviewer> tag depending on the number of reviewers
+     -->
+<reviewers>
+        <reviewer email="md-fahad.hasan@stud.uni-bamberg.de" matrikelnummer="2043989"> </reviewer>
+        <reviewer email="stefan-wolfang.raab@stud.uni-bamberg.de" matrikelnummer="2033352"> </reviewer>
+        <reviewer email="abdullah-al.faiyaz@stud.uni-bamberg.de" matrikelnummer="2034094"> </reviewer>
+        <reviewer email="anne.schwarz@stud.uni-bamberg.de" matrikelnummer="1804723"> </reviewer>
+    </reviewers>
+</reviewers>
+<GroupMembers>
+<!-- 
+    == Please specify the group members with an entry for every member.
+	== Make sure to write the names the same way for all the review forms
+	== add or remove <member> tags depending on the number of the group members
+     -->
+<member email="uchchhwash.chakraborty@stud.uni-bamberg.de" matrikelnummer="2029079"> </member>
+<member email="sunny.chowdhury@stud.uni-bamberg.de" matrikelnummer="2044029"> </member>
+<member email="shamim.miroliaei@stud.uni-bamberg.de" matrikelnummer="2052045"> </member>
+<member email="shafaq.khan@stud.uni-bamberg.de" matrikelnummer="2051539"> </member>
+<member email="kamrul.hasan@stud.uni-bamberg.de" matrikelnummer="2029063"> </member>
+</GroupMembers>
+<doneExercises>1</doneExercises>
+<reviewText>
+    Exercise 1s
+    
+    Task 1 - In our eyes, the solution fits as it is. We have nothing to remark.
+
+    Task 2 - In our eyes, the solution fits as it is. We have nothing to remark.
+
+    Task 3 - In our eyes, the solution fits as it is. We have nothing to remark. (26 typo instead of 25)
+
+    Task 4 - In our eyes, the solution fits as it is. We have nothing to remark.
+    
+    Task 5 - In our eyes, the solution fits as it is. We have nothing to remark.
+
+    Task 6 - In our eyes, the solution fits as it is. We have nothing to remark.
+
+    Task 7 - In our eyes, the solution fits as it is. We have nothing to remark.
+
+</reviewText>
+<openQuestions>
+a sample open question
+<!-- 
+    == Please write your questions for topics that are still unclear for both the lecture
+       and the assignments
+    -->
+</openQuestions>
+</review>
